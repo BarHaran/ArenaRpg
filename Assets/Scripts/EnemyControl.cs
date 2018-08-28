@@ -15,13 +15,15 @@ public class EnemyControl : MonoBehaviour
     public bool attacking;
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindWithTag("Player");
         health = 60;
         poison = 0;
         sword = transform.GetChild(0);
+        attpending = true;
+        attacking = false;
     }
 
     // Update is called once per frame
@@ -56,18 +58,20 @@ public class EnemyControl : MonoBehaviour
     {
         if (agent.remainingDistance < 3)
             if (!attacking && attpending)
+            {
                 attacking = true;
+            }
         if (attacking)
         {
             attpending = false;
-            sword.localEulerAngles = new Vector3(Mathf.LerpAngle(transform.localEulerAngles.x, 90, 0.3f), 0, 0);
+            sword.localEulerAngles = new Vector3(Mathf.LerpAngle(sword.localEulerAngles.x, 90, 0.25f), 0, 0);
             if (sword.localEulerAngles.x > 89)
                 attacking = false;
         }
         else if (!attpending)
         {
             if (sword.localEulerAngles.x > 1)
-                sword.localEulerAngles = new Vector3(Mathf.LerpAngle(transform.localEulerAngles.x, 0, 0.15f), 0, 0);
+                sword.localEulerAngles = new Vector3(Mathf.LerpAngle(sword.localEulerAngles.x, 0, 0.15f), 0, 0);
             else
                 attpending = true;
         }
