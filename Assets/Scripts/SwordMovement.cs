@@ -81,13 +81,21 @@ public class SwordMovement : MonoBehaviour
             }
             else
             {
-                //transform.localEulerAngles = new Vector3(Mathf.LerpAngle(transform.localEulerAngles.x, -10, properties.Speed * Time.deltaTime / 3), 0, 0);
                 if (transform.localEulerAngles.x > 345 && transform.localEulerAngles.x < 355)
                 {
                     attackPending = true;
                     hit = HitState.Pending;
                 }
             }
+        }
+    }
+
+    void ResetAttack()
+    {
+        if (hit == HitState.Blocked)
+        {
+            attacking = false;
+            hit = HitState.Pending;
         }
     }
 }
