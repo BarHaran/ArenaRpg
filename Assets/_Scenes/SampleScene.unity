@@ -470,6 +470,7 @@ GameObject:
   - component: {fileID: 734150181}
   - component: {fileID: 734150180}
   - component: {fileID: 734150179}
+  - component: {fileID: 734150182}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Sword
@@ -544,6 +545,28 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 734150177}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &734150182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 734150177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8628a249c02919c4e96b8d38dad1ddb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addedDamage: 0
+  addedSpeed: 0
+  criticalRate: 0
+  criticalDamage: 0
+  oneShotRate: 0
+  shockRate: 0
+  fireDamage: 0
+  knockbackForce: 0
+  comboAttack: 0
+  comboDamage: 0
+  hit: 0
 --- !u!1 &923834426
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,6 +989,46 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!1 &1388485298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1388485300}
+  - component: {fileID: 1388485299}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1388485299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1388485298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d111cd9efc047af4aa928a134663a7ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1388485300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1388485298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1429840972
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1152,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1542056538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb70d6fbda6c5cc4fbb31975d89ebfec, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c59e1a842b0ea84d9cb0a3a10f493b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1716411601
