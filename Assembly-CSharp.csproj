@@ -62,10 +62,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\EnemyGenerator.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HealthController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\SwordController.cs" />
-    <Compile Include="Assets\Scripts\SwordDamage.cs" />
+    <Compile Include="Assets\Scripts\SwordMovement.cs" />
+    <Compile Include="Assets\Scripts\SwordProperties.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/USER/Desktop/ArenaRpg/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

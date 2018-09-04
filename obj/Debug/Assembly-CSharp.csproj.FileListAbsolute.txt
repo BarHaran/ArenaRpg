@@ -1,0 +1,4 @@
+C:\Users\USER\Desktop\ArenaRpg\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\USER\Desktop\ArenaRpg\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\ArenaRpg\obj\Debug\Assembly-CSharp.dll
+C:\Users\USER\Desktop\ArenaRpg\obj\Debug\Assembly-CSharp.pdb

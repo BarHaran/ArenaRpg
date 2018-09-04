@@ -49,4 +49,19 @@ public class HealthController : MonoBehaviour
         yield return new WaitForSeconds(1);
         yield return HealthAndShieldRegen();
     }
+
+    IEnumerator FireDamage()
+    {
+        if (fireDuration > 0)
+        {
+            if (currentShield > 0)
+                currentShield -= fireDamage / 4;
+            else
+                currentHealth -= fireDamage / 4;
+            fireDuration -= 0.25f;
+            yield return new WaitForSeconds(0.25f);
+            yield return FireDamage();
+        }
+        else fireDamage = 0;
+    }
 }
