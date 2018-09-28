@@ -25,8 +25,11 @@ public class SwordMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Block();
-        Attack();
+        if (transform.parent.tag == "Player")
+        {
+            Block();
+            Attack();
+        }
     }
 
     void Block()
