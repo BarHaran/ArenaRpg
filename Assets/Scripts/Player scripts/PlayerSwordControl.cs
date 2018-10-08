@@ -11,7 +11,7 @@ namespace Properites
         Blocked
     }
 
-    public class SwordProperties : MonoBehaviour
+    public class PlayerSwordControl : MonoBehaviour
     {
         #region Class properties
         public const float baseDamage = 25; //Base sword damage
@@ -52,7 +52,6 @@ namespace Properites
             if (isOneShot)
                 damage = float.PositiveInfinity;
             return damage;
-
         }
 
         public bool IsShock()
@@ -70,7 +69,7 @@ namespace Properites
             comboAttack++;
         }
 
-        public HitState hit;
+        public HitState hitState;
         #endregion
 
         void Start()
@@ -85,14 +84,14 @@ namespace Properites
 
         private void OnCollisionEnter(Collision collision)
         {
-            if (collision.transform.tag == "Sword")
+            if (collision.transform.tag == "EnemySword" || collision.transform.tag == "PlayerSword")
             {
-                hit = HitState.Blocked;
+                hitState = HitState.Blocked;
             }
             if (collision.transform.tag == "Enemy")
             {
                 GetComponent<Collider>().isTrigger = true;
-                hit = HitState.Hit;
+                hitState = HitState.Hit;
                 AddCombo();
             }
         }
