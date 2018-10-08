@@ -64,5 +64,8 @@ public class PlayerMovementController : MonoBehaviour
             cam.localEulerAngles = new Vector3(camrotation.x - inx * sensitivity_y, 0, 0);
         }
     }
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.collider.name);
+    }
 }
