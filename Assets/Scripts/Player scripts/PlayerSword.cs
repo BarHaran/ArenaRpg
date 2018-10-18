@@ -22,20 +22,7 @@ public class PlayerSword : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-<<<<<<< HEAD:Assets/Scripts/Player scripts/PlayerSword.cs
-    public void Block()
-=======
-    void FixedUpdate()
-    {
-        if (transform.parent.tag == "Player")
-        {
-            Block();
-            Attack();
-        }
-    }
-
     void Block()
->>>>>>> 3db1b9d20b32b02f85b38c8f9a360fb9a7ed3eec:Assets/Scripts/SwordMovement.cs
     {
         if (Input.GetKey(KeyCode.Mouse1))
         {
