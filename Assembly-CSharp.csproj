@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\EnemyScripts\EnemySwordControl.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HealthController.cs" />
+    <Compile Include="Assets\Scripts\Player scripts\PlayerGunProperties.cs" />
     <Compile Include="Assets\Scripts\Player scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player scripts\PlayerMovementController.cs" />
     <Compile Include="Assets\Scripts\Player scripts\PlayerSword.cs" />
